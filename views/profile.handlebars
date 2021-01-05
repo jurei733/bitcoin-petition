@@ -1,0 +1,16 @@
+<h1>Optional additional information</h1>
+
+{{#if error}}
+            <p id="warning">Invalid Homepage</p>
+    {{/if}}
+
+<form method="POST" action="profile">
+   
+    Age:<input type="number" name="age" />
+    City:<input type="text" name="city" />
+    Homepage:<input type="url" name="homepage" />
+    
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button type="submit" class="btn">Continue</button>
+</form> 

@@ -1,0 +1,23 @@
+
+<h1>Sign my petition to increase the acceptance of Bitcoin.</h1>
+
+{{#if error}}
+            <p id="warning">Missing Data</p>
+    {{/if}}
+    {{#if errorDoubleEmail}}
+            <p id="warning">This account already exist. Please choose another one.</p>
+    {{/if}}
+
+
+<form method="POST" action="register" autocomplete="off">
+   
+    First Name:<input type="text" name="firstname" />
+    Last Name:<input type="text" name="lastname" />
+     Email:<input type="email" name="email" />
+      Password:<input type="password" name="password" />
+    
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    
+    <button type="submit" class="btn">Register</button>
+    <a href="login">Already Registered?</a>
+</form> 

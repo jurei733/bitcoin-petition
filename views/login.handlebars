@@ -1,0 +1,13 @@
+<h1>Login</h1>
+
+{{#if error}}
+            <p id="warning">Invalid email or password </p>
+    {{/if}}
+
+<form method="POST" action="login" autocomplete="off">
+   
+    Email:<input type="email"  name="username" />
+    Password:<input type="text" name="password" />
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button type="submit" class="btn">Submit</button>
+</form> 

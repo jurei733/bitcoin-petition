@@ -1,0 +1,19 @@
+<h1>Edit your Profile</h1>
+
+{{#if error}}
+            <p id="warning">Invalid Data</p>
+    {{/if}}
+
+<form method="POST" action="edit" autocomplete="off">
+    First Name:<input type="text" name="firstname" value="{{firstname}}"/>
+    Last Name:<input type="text" name="lastname" value="{{lastname}}"/>
+    Email:<input type="email" name="email" value="{{email}}"/>
+    Password:<input type="password" name="password"/>
+    Age:<input type="number" name="age" value="{{age}}"/>
+    City:<input type="text" name="city" value="{{city}}"/>
+    Homepage:<input type="url" name="homepage" value="{{homepage}}"/>
+    
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button type="submit" class="btn">Update</button>
+</form> 

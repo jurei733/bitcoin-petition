@@ -1,0 +1,24 @@
+ {{#if error}}
+            <p id="warning">Missing Data</p>
+    {{/if}}
+
+    {{#if signature}}
+    <h1>Thank you for your support {{session.user.firstname}}</h1> 
+    <img src={{ signature }}>
+        <form action="/signature/delete" method="POST">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button class="btn">Delete Signature</button>
+        </form>
+    <a href="/signers">Here you find all the signers yet.</a>
+{{else}}
+<h1>Sign here my petition to increase the acceptance of Bitcoin.</h1>
+<form method="POST" action="sign-petition">
+   
+    <input type="hidden" name="signature" id="hidden" />
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <canvas id="signature" width="400" height="100">YOUR SIGNATURE PLEASE</canvas>
+    <button type="submit" class="btn">Sign</button>
+</form> 
+
+
+{{/if}}

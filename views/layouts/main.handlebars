@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petition</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <img id="bitcoin" src="/bitcoin.png">
+        <h2>{{#if session.user}}
+        Hi {{session.user.firstname}}| 
+        <a href="/signers">{{session.user.count}} Signer</a>  |  
+        <a href="/">Your Signature</a>  |  
+        <a href="/profile/edit">Edit Profile </a>  |  
+        <a href="/logout">Logout</a>&nbsp
+        {{else}}
+        <a href="/register">Register</a>  |  <a href="/login">Login</a>&nbsp
+        {{/if}}
+        </h2>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    <footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/sign.js"></script>
+</body>
+</html>

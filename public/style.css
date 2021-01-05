@@ -1,0 +1,113 @@
+* {
+    background-color: rgb(15, 76, 129);
+    color: white;
+    padding-left: 10px;
+    font-family: "Perpetua";
+    font-size: 24px;
+}
+
+html {
+    padding-top: 50px;
+}
+
+canvas {
+    border: 2px solid white;
+    display: block;
+    margin: 10px;
+    background-color: rgb(36, 90, 172);
+    color: white;
+}
+
+#bitcoin {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+#warning {
+    color: red;
+    font-weight: bold;
+}
+
+header {
+    height: 30px;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+header h2 {
+    color: rgb(246, 100, 100);
+    float: right;
+}
+
+h1 {
+    color: rgb(255, 197, 89);
+    font-family: "Perpetua";
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="url"] {
+    outline: none;
+    border: 0;
+    background-color: rgb(15, 76, 129);
+    border-bottom: 5px solid rgb(36, 90, 172);
+    width: 400px;
+    display: block;
+    font-size: 32px;
+    transition: all 2s ease-in-out;
+    color: #f2f4fb;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+input[type="text"]:active {
+    color: white;
+}
+
+main {
+    border: solid 5px rgb(246, 100, 100);
+    margin: 0 auto;
+    min-width: 600px;
+    width: 70vw;
+    min-height: 800px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(36, 90, 172);
+    color: #f2f4fb;
+    padding: 20px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: rgb(25, 77, 155);
+}
+
+.btn:active {
+    border: solid rgb(15, 76, 129) 2px;
+    font-weight: bold;
+}
